@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+    <title>gift</title>
   </head>
-  <body>
-    feiffffffffffffffffffffff
+  <body style="display: flex; flex-direction: column; justify-content: center">
+    <img
+      style="margin-top: 50px"
+      src="https://img02.sogoucdn.com/app/a/100520021/beac16c1d80e0275fd61f333cb9eb0b1"
+      alt=""
+      class="lihuatong"
+    />
+    <div style="margin-top: 50px; font-size: 32px; text-align: center">
+      祝小飞教师节快乐！
+    </div>
   </body>
 </html>
+
+<script type="module">
+  // 引入插件
+  import { confetti } from "https://cdn.jsdelivr.net/npm/tsparticles-confetti/+esm";
+
+  // 要操作的元素
+  const lihuatong = document.querySelector(".lihuatong");
+
+  // 喷出五彩纸屑
+  const run = () => {
+    confetti({
+      particleCount: 400, //粒子数量
+      spread: 100, //扩散范围
+      origin: {
+        //喷出的位置
+        x: 0.5,
+        y: 0.65,
+      },
+    });
+  };
+
+  // 礼花筒绑定点击事件
+  // lihuatong.addEventListener("click", run);
+  setInterval(() => {
+    run();
+  }, 1000);
+</script>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    /* 禁止选取 */
+    user-select: none;
+  }
+  .lihuatong {
+    width: 100%;
+  }
+</style>
